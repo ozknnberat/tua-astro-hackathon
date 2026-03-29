@@ -78,15 +78,27 @@ cd tua-astro-hackathon
 
 Bash
 
-# Node.js ile:
-
 npx serve .
 
+
+
+Bash
+
+4. Gerekli klasörleri (dizinleri) oluşturun
+mkdir css
+mkdir js
+
+
+5. CSS dosyasını css klasörüne taşıyın
+mv style.css css/
+
+
+
+6. Tüm JavaScript dosyalarını js klasörüne taşıyın
+mv *.js js/
+
   
-
-# Veya VS Code kullanıyorsanız "Live Server" eklentisi ile index.html'i açabilirsiniz.
-
-4. Tarayıcınızda görüntüleyin: http://192.168.56.1:3000/ adresine giderek simülasyonu başlatın.
+7. Tarayıcınızda görüntüleyin: http://192.168.56.1:3000/ adresine giderek simülasyonu başlatın.
 
   
 
