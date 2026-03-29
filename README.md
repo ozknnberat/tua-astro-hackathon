@@ -1,79 +1,149 @@
-# 🚀 TUA ASTRO HACKATHON - Cloud Tech
+# 🚀 TUA ASTRO HACKATHON 2026 - Cloud Tech
 
-## Proje Hakkında
+  
 
-Ay'a İlk Temas - Dijital Eğitim ve Hikayecilik Aracı
+## 🌌 Proje Hakkında: Ay'a İlk Temas
 
-Karabük Üniversitesi Bulut Bilişim öğrencileri olarak geliştirdiğimiz bu proje, uzay meraklısı çocuklar için sınırları ortadan kaldıran, oyunlaştırılmış bir simülasyon deneyimi sunmaktadır.
+  
 
-## 🎮 Özellikler
+**Dijital Eğitim ve Hikayecilik Aracı**
 
-- 3D Güneş Sistemi Simülasyonu - Three.js ile gerçek zamanlı 3D güneş sistemi
-- FPS Kamera Kontrolü - Fare ve scroll ile serbest kamera gezintisi
-- Gezegen Etkileşimleri - Gezegenlere tıklama ve bilgi alma
-- Dünya → Ay Yolculuğu - 3 farklı uzay aracı seçeneği ile Ay'a yolculuk
-- Bilgi Kartları - Yolculuk süresince 10 uzay bilgisi
-- Doğru/Yanlış Quiz - Öğrenilen bilgilerin test edilmesi
-- Ay Yüzeyi Keşfi - FPS modunda 60 saniyelik Ay gezintisi
-- Türk Bayrağı Dikme - Görev tamamlandığında bayrak animasyonu
+  
 
-## 🛠 Teknolojiler
+Karabük Üniversitesi Bulut Bilişim öğrencileri olarak geliştirdiğimiz bu proje, uzay meraklısı çocuklar için sınırları ortadan kaldıran, oyunlaştırılmış bir 3D uzay simülasyonudur. Geleceğin uzay kâşiflerini yetiştirmek amacıyla tasarlanan bu deneyim, kullanıcıları Güneş Sistemi'nin derinliklerinden Ay yüzeyindeki ilk adımlara kadar uzanan eğitici bir yolculuğa çıkarır.
 
-- HTML5 / CSS3 - Modern web standartları
-- JavaScript (ES6+) - OOP yapısı ile modüler kod
-- Three.js - 3D grafik render engine
-- WebGL - Hardware-accelerated 3D graphics
-- Pointer Lock API - FPS kamera kontrolü
+  
 
-## 📁 Proje Yapısı
+## 🎮 Öne Çıkan Gelişmiş Özellikler
 
-tua-astro-hackathon/
-├── index.html # Ana sayfa
-├── css/
-│ └── style.css # Tüm stiller
-├── js/
-│ ├── main.js # Website mantığı & oyun yönetimi
-│ ├── solarSystem.js # 3D Güneş Sistemi
-│ ├── mission.js # Görev yöneticisi & quiz
-│ └── moonExplorer.js # Ay yüzeyi FPS keşfi
-└── README.md
+  
 
-## 🚀 Kurulum & Çalıştırma
+-  **Gerçekçi 3D Güneş Sistemi Simülasyonu:** Three.js ile tasarlanmış, detaylı yıldız tarlası (starfield), parlayan Güneş (core glow & corona) ve yörünge mekanikleri.
 
-1. Repoyu klonlayın:
-```bash
-git clone https://github.com/ozknnberat7/tua-astro-hackathon.git
+-  **Akıcı ve Modern Kullanıcı Arayüzü (UI):** Özel tasarlanmış ön yükleyici (preloader), kilitli gezegen uyarıları ve dinamik görev bildirim sistemi.
+
+-  **Uzay Aracı Seçimi:** Ay yolculuğu için farklı hız, güvenlik ve konfor istatistiklerine sahip araçlar (Kartal-1, Yıldız-X, Hilal-7).
+
+-  **Oyunlaştırılmış Öğrenme Deneyimi:** - Dünya'dan Ay'a yolculuk sırasında sunulan eğitici uzay bilgi kartları.
+
+- Öğrenilenleri pekiştiren interaktif Doğru/Yanlış Quiz sistemi.
+
+-  **Ay Yüzeyi Keşfi (FPS Modu):** Görev başarıldıktan sonra Ay yüzeyinde "Pointer Lock API" ile 60 saniyelik serbest yürüyüş ve keşif imkanı.
+
+-  **Gurur Verici Kapanış:** Başarılı Ay görevi sonrası astronot animasyonu ve Türk Bayrağı dikme seremonisi.
+
+  
+
+## 🛠 Teknolojiler ve Mimari
+
+  
+
+Proje, herhangi bir dış bağımlılık (paket yöneticisi) gerektirmeden, doğrudan tarayıcı üzerinde yüksek performanslı çalışacak şekilde optimize edilmiştir.
+
+  
+
+-  **Frontend:** HTML5, CSS3 (Modern Flexbox/Grid yapısı)
+
+-  **Mantık & Kontrol:** JavaScript (ES6+), Modüler OOP Mimarisi
+
+-  **3D Render Motoru:** Three.js (CDN üzerinden), WebGL
+
+-  **Kamera Kontrolü:** Pointer Lock API (FPS Modu)
+
+🚀 Kurulum & Çalıştırma
+
+Proje güvenlik önlemleri (CORS politikaları) nedeniyle yerel bir sunucu (local server) üzerinden çalıştırılmalıdır.
+
+  
+
+1. Depoyu klonlayın:
+
+  
+
+Bash
+
+git clone [https://github.com/ozknnberat7/tua-astro-hackathon.git](https://github.com/ozknnberat7/tua-astro-hackathon.git)
 
 2. Proje dizinine gidin:
+
+  
+
+Bash
+
 cd tua-astro-hackathon
 
-3. Bir local server başlatın (CORS gereksinimleri nedeniyle):
-# Python 3
-python -m http.server 8000
+3. Yerel bir sunucu başlatın:
 
-# Node.js
+  
+
+Bash
+
+# Node.js ile:
+
 npx serve .
 
-# VS Code Live Server eklentisi ile de açabilirsiniz
+  
 
-4. Tarayıcınızda açın: http://localhost:8000
+# Veya VS Code kullanıyorsanız "Live Server" eklentisi ile index.html'i açabilirsiniz.
 
-Kullanım: 
-Ana Sayfa: TUA Astro Hackathon hakkında bilgi
-Oyunlar butonuna tıklayın
-Güneş Sisteminde gezinin (sağ tık + sürükle ile kamerayı döndürün)
-Dünya'ya tıklayın (diğer gezegenler kilitli)
-Görev bildirimini kabul edin
-Uzay aracınızı seçin ve yolculuğa başlayın
-Bilgi kartlarını okuyun
-Quiz'i tamamlayın (yanlış cevaplarda tekrar deneyin)
-Bayrak dikme animasyonunu izleyin
-Gezintiye Çık ile Ay yüzeyini keşfedin (60 sn)
+4. Tarayıcınızda görüntüleyin: http://192.168.56.1:3000/ adresine giderek simülasyonu başlatın.
 
-👨‍💻 Takım: Cloud Tech
-Karabük Üniversitesi - Bulut Bilişim Bölümü tarafından,
-TUA Astro Hackathon 2025 için geliştirilmiştir.
+  
 
-📄 Lisans: MIT License
+👨‍🚀 Kullanım Rehberi
 
-Not: Bu projeyi çalıştırmak için dosyaları yukarıdaki yapıya göre oluşturun ve bir local web server üzerinden açın. Three.js CDN'den yüklenir, ekstra bağımlılık gerekmez.
+Ana sayfadaki etkinlikler bölümünden Güneş Sistemi Simülasyonu'nu seçin.
+
+  
+
+3D sahnede fare ile kamerayı yönlendirin ve Dünya'ya tıklayın.
+
+  
+
+Gelen görev bildirimini kabul ederek uzay aracınızı seçin.
+
+  
+
+Yolculuk sırasında ekrana gelen uzay bilgilerini okuyun ve ardından gelen mini-testi başarıyla tamamlayın.
+
+  
+
+Görev sonunda bayrak dikme animasyonunu izleyin ve "Gezintiye Çık" butonuna tıklayarak Ay yüzeyini FPS modunda (W, A, S, D tuşları ile) keşfedin.
+
+  
+
+👥 Takım: Cloud Tech
+
+Bu proje Karabük Üniversitesi - Bulut Bilişim Bölümü öğrencileri tarafından, TUA Astro Hackathon 2026 için gururla geliştirilmiştir.
+
+  
+
+📄 Lisans
+
+Bu proje MIT Lisansı altında lisanslanmıştır.
+
+## 📁 Proje Klasör Yapısı
+
+  
+
+```text
+
+tua-astro-hackathon/
+
+├── index.html # Ana sayfa ve oyun UI katmanı
+
+├── css/
+
+│ └── style.css # Modern ve duyarlı tasarımlar
+
+├── js/
+
+│ ├── main.js # Temel website mantığı ve DOM yönetimi
+
+│ ├── solarSystem.js # 3D Güneş Sistemi ve Three.js render mantığı
+
+│ ├── mission.js # Görev akışı, quiz sistemi ve uzay aracı seçimi
+
+│ └── moonExplorer.js # Ay yüzeyi FPS keşif mekanikleri
+
+└── README.md
