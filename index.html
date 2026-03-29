@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUA ASTRO HACKATHON - Cloud Tech</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="planet-loader">
+                <div class="planet-ring"></div>
+                <div class="planet-body"></div>
+            </div>
+            <h2 class="loader-text">UZAY'A İLK ADIM ATILIYOR<span class="dots">...</span></h2>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-rocket"></i>
+                <span>TUA ASTRO</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Ana Sayfa</a></li>
+                <li><a href="#about" class="nav-link">Hakkımızda</a></li>
+                <li><a href="#events" class="nav-link">Etkinlikler</a></li>
+                </a></li>
+            </ul>
+            <div class="nav-hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-satellite"></i>
+                <span>TÜRKİYE UZAY AJANSI</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">TUA ASTRO</span>
+                <span class="title-line accent">HACKATHON</span>
+                <span class="title-year">2026</span>
+            </h1>
+            <p class="hero-description">
+                Uzayın sınırsız derinliklerini keşfetmeye hazır mısınız?
+                Geleceğin uzay kâşiflerini yetiştirmek için tasarlanmış
+                etkileşimli simülasyon deneyimi.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="8">0</span>
+                    <span class="stat-label">Gezegen</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-label">Bilgi Kartı</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1">0</span>
+                    <span class="stat-label">Görev</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Keşfet
+                </a>
+                <a href="#" class="btn btn-secondary" id="heroGameBtn">
+                    <i class="fas fa-play"></i> Oyuna Başla
+                </a>
+            </div>
+            </div>
+        </div>
+        <div class="floating-elements">
+            <div class="floating-planet p1"></div>
+            <div class="floating-planet p2"></div>
+            <div class="floating-planet p3"></div>
+            <div class="floating-star s1">✦</div>
+            <div class="floating-star s2">✦</div>
+            <div class="floating-star s3">✦</div>
+            <div class="floating-star s4">✦</div>
+            <div class="floating-star s5">✦</div>
+        </div>
+    </section>
+
+    <!-- Space Info Section -->
+    <section id="space-info">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-meteor"></i> UZAY BİLGİLERİ</span>
+                <h2 class="section-title">Evrenin Sırlarını Keşfet</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-sun"></i></div>
+                    <h3>Güneş Sistemi</h3>
+                    <p>Güneş sistemi yaklaşık 4.6 milyar yıl önce oluşmuştur. 8 gezegen, 5 cüce gezegen ve milyarlarca küçük cisim barındırır.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-moon"></i></div>
+                    <h3>Ay</h3>
+                    <p>Ay, Dünya'nın tek doğal uydusudur. Dünya'dan ortalama 384,400 km uzaklıktadır. İlk insanlı Ay görevi 1969'da gerçekleşmiştir.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-globe-americas"></i></div>
+                    <h3>Dünya</h3>
+                    <p>Dünya, güneş sisteminde yaşam barındırdığı bilinen tek gezegendir. Yüzeyinin %71'i su ile kaplıdır.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-user-astronaut"></i></div>
+                    <h3>Türkiye Uzay Ajansı</h3>
+                    <p>TUA, 2018 yılında kurulmuş olup Türkiye'nin uzay politikalarını belirlemek ve uzay projelerini yürütmekle görevlidir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-visual">
+                    <div class="about-planet-scene">
+                        <div class="about-planet"></div>
+                        <div class="about-orbit o1"><div class="orbit-dot"></div></div>
+                        <div class="about-orbit o2"><div class="orbit-dot"></div></div>
+                        <div class="about-orbit o3"><div class="orbit-dot"></div></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag"><i class="fas fa-users"></i> HAKKIMIZDA</span>
+                    <h2 class="section-title">Cloud Tech</h2>
+                    <div class="about-badge">
+                        <i class="fas fa-university"></i>
+                        <span>Karabük Üniversitesi - Bulut Bilişim</span>
+                    </div>
+                    <p class="about-text">
+                        Karabük Üniversitesi, Bulut Bilişim öğrencileri olarak en temel amacımız:
+                    </p>
+                    <p class="about-text highlight">
+                        Uzay meraklısı çocuklar için sınırları ortadan kaldıran, oyunlaştırılmış bir simülasyon yaratmak.
+                    </p>
+                    <p class="about-text">
+                        Geliştirdiğimiz bu etkileşimli uzay simülasyonu sayesinde çocuklar sadece bir oyun oynamayacak;
+                        uzaydaki gerçek zorluklarla yüzleşip, kendi yenilikçi çözümlerini tasarlayan
+                        genç kâşiflere dönüşecekler.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Etkileşimli Simülasyon</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Oyunlaştırılmış Öğrenme</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Yenilikçi Düşünce</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-child"></i>
+                            <span>Çocuk Dostu Tasarım</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag"><i class="fas fa-calendar-alt"></i> ETKİNLİKLER</span>
+                <h2 class="section-title">Oyunlar & Görevler</h2>
+                <p class="section-subtitle">Uzay maceranıza başlamak için aşağıdaki oyunu seçin</p>
+            </div>
+            <div class="events-grid">
+                <div class="event-card main-event" id="solarSystemCard">
+                    <div class="event-card-bg"></div>
+                    <div class="event-badge">AKTİF</div>
+                    <div class="event-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3>Güneş Sistemi Simülasyonu</h3>
+                    <p>3D Güneş Sistemi'nde gezin, gezegenleri keşfedin ve Dünya'dan Ay'a yolculuk görevini tamamlayın.</p>
+                    <ul class="event-features">
+                        <li><i class="fas fa-check"></i> 3D Güneş Sistemi</li>
+                        <li><i class="fas fa-check"></i> FPS Kamera Kontrolü</li>
+                        <li><i class="fas fa-check"></i> Ay'a Yolculuk Görevi</li>
+                        <li><i class="fas fa-check"></i> Bilgi Kartları & Quiz</li>
+                        <li><i class="fas fa-check"></i> Ay Yüzeyi Keşfi</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full" id="playGameBtn">
+                        <i class="fas fa-play"></i> Oyna
+                    </button>
+                </div>
+                <div class="event-card locked-event">
+                    <div class="event-card-bg"></div>
+                    <div class="event-badge locked">YAKINDA</div>
+                    <div class="event-icon">
+                        <i class="fas fa-mars"></i>
+                    </div>
+                    <h3>Mars Kolonisi</h3>
+                    <p>Mars'ta bir koloni kur ve hayatta kalmaya çalış.</p>
+                    <div class="locked-overlay">
+                        <i class="fas fa-lock"></i>
+                        <span>Yakında</span>
+                    </div>
+                </div>
+                <div class="event-card locked-event">
+                    <div class="event-card-bg"></div>
+                    <div class="event-badge locked">YAKINDA</div>
+                    <div class="event-icon">
+                        <i class="fas fa-satellite-dish"></i>
+                    </div>
+                    <h3>Uzay İstasyonu</h3>
+                    <p>Uluslararası Uzay İstasyonu'nda görevleri tamamla.</p>
+                    <div class="locked-overlay">
+                        <i class="fas fa-lock"></i>
+                        <span>Yakında</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>TUA ASTRO HACKATHON</span>
+                    </div>
+                    <p>Karabük Üniversitesi - Cloud Tech</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/ozknnberat?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ozknnberat/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cloud Tech. Tüm hakları saklıdır. TUA Astro Hackathon için geliştirilmiştir.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =================== GAME CONTAINER =================== -->
+    <div id="gameContainer" class="hidden">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- Game UI Overlay -->
+        <div id="gameUI">
+            <!-- Top Bar -->
+            <div class="game-top-bar">
+                <div class="game-logo">
+                    <i class="fas fa-rocket"></i> TUA ASTRO
+                </div>
+                <div class="game-status" id="gameStatus">Güneş Sistemi - Serbest Gezinti</div>
+                <button class="btn-game-exit" id="exitGameBtn">
+                    <i class="fas fa-times"></i> Çıkış
+                </button>
+            </div>
+
+            <!-- Controls Help -->
+            <div class="game-controls-help" id="controlsHelp">
+                <h4><i class="fas fa-keyboard"></i> Kontroller</h4>
+                <div class="control-item"><span class="key">Fare</span> Etrafa bak</div>
+                <div class="control-item"><span class="key">Scroll</span> Yakınlaş/Uzaklaş</div>
+                <div class="control-item"><span class="key">Tıkla</span> Gezegen seç</div>
+                <div class="control-item"><span class="key">ESC</span> Menü</div>
+                <button class="btn-close-help" id="closeHelpBtn">Anladım</button>
+            </div>
+
+            <!-- Planet Locked Alert -->
+            <div class="game-alert hidden" id="planetLockedAlert">
+                <div class="alert-content">
+                    <div class="alert-icon"><i class="fas fa-lock"></i></div>
+                    <h3 id="lockedPlanetName">Bu gezegen şu anda kilitli</h3>
+                    <p>Bu gezegen henüz keşfe açılmamıştır. Görevleri tamamlayarak yeni gezegenlerin kilidini açabilirsiniz.</p>
+                    <button class="btn btn-primary" id="closeLockedAlert">Tamam</button>
+                </div>
+            </div>
+
+            <!-- Earth Mission Alert -->
+            <div class="game-alert hidden" id="earthMissionAlert">
+                <div class="alert-content mission-alert">
+                    <div class="alert-icon pulse"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h3>🇹🇷 Türkiye'den Görev Bildirimi!</h3>
+                    <div class="mission-project">
+                        <h4>Eklenen Projeler:</h4>
+                        <div class="project-item">
+                            <i class="fas fa-moon"></i>
+                            <div>
+                                <strong>Ay'a İlk Temas</strong>
+                                <p>Dijital Eğitim ve Hikayecilik Aracı</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mission-buttons">
+                        <button class="btn btn-primary" id="startMissionBtn">
+                            <i class="fas fa-rocket"></i> Görevi Başlat
+                        </button>
+                        <button class="btn btn-secondary" id="cancelMissionBtn">Daha Sonra</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spacecraft Selection -->
+            <div class="game-panel hidden" id="spacecraftSelection">
+                <div class="panel-content">
+                    <h2><i class="fas fa-space-shuttle"></i> Uzay Aracını Seç</h2>
+                    <p>Ay yolculuğu için uzay aracını seç</p>
+                    <div class="spacecraft-grid">
+                        <div class="spacecraft-card" data-craft="falcon">
+                            <div class="craft-visual">
+                                <div class="craft-3d falcon-craft">
+                                    <div class="craft-body"></div>
+                                    <div class="craft-nose"></div>
+                                    <div class="craft-fin left"></div>
+                                    <div class="craft-fin right"></div>
+                                    <div class="craft-window"></div>
+                                </div>
+                            </div>
+                            <h3>Kartal-1</h3>
+                            <div class="craft-stats">
+                                <div class="stat"><span>Hız</span><div class="stat-bar"><div style="width:80%"></div></div></div>
+                                <div class="stat"><span>Güvenlik</span><div class="stat-bar"><div style="width:90%"></div></div></div>
+                                <div class="stat"><span>Konfor</span><div class="stat-bar"><div style="width:70%"></div></div></div>
+                            </div>
+                        </div>
+                        <div class="spacecraft-card" data-craft="shuttle">
+                            <div class="craft-visual">
+                                <div class="craft-3d shuttle-craft">
+                                    <div class="craft-body"></div>
+                                    <div class="craft-nose"></div>
+                                    <div class="craft-wing left"></div>
+                                    <div class="craft-wing right"></div>
+                                    <div class="craft-window"></div>
+                                </div>
+                            </div>
+                            <h3>Yıldız-X</h3>
+                            <div class="craft-stats">
+                                <div class="stat"><span>Hız</span><div class="stat-bar"><div style="width:60%"></div></div></div>
+                                <div class="stat"><span>Güvenlik</span><div class="stat-bar"><div style="width:95%"></div></div></div>
+                                <div class="stat"><span>Konfor</span><div class="stat-bar"><div style="width:85%"></div></div></div>
+                            </div>
+                        </div>
+                        <div class="spacecraft-card" data-craft="capsule">
+                            <div class="craft-visual">
+                                <div class="craft-3d capsule-craft">
+                                    <div class="craft-body"></div>
+                                    <div class="craft-top"></div>
+                                    <div class="craft-bottom"></div>
+                                    <div class="craft-window"></div>
+                                </div>
+                            </div>
+                            <h3>Hilal-7</h3>
+                            <div class="craft-stats">
+                                <div class="stat"><span>Hız</span><div class="stat-bar"><div style="width:95%"></div></div></div>
+                                <div class="stat"><span>Güvenlik</span><div class="stat-bar"><div style="width:75%"></div></div></div>
+                                <div class="stat"><span>Konfor</span><div class="stat-bar"><div style="width:60%"></div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-full hidden" id="launchBtn">
+                        <i class="fas fa-rocket"></i> Yolculuğu Başlat
+                    </button>
+                </div>
+            </div>
+
+            <!-- Journey Panel -->
+            <div class="game-panel hidden" id="journeyPanel">
+                <div class="journey-hud">
+                    <div class="journey-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="journeyProgress"></div>
+                        </div>
+                        <div class="progress-labels">
+                            <span>🌍 Dünya</span>
+                            <span id="journeyPercent">0%</span>
+                            <span>🌙 Ay</span>
+                        </div>
+                    </div>
+                    <div class="journey-info-card" id="journeyInfoCard">
+                        <div class="info-card-number" id="infoNumber">1/10</div>
+                        <p id="infoText">Bilgi yükleniyor...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Panel -->
+            <div class="game-panel hidden" id="quizPanel">
+                <div class="panel-content quiz-content">
+                    <h2><i class="fas fa-question-circle"></i> Bilgi Testi</h2>
+                    <div class="quiz-progress">
+                        <span id="quizProgress">1/10</span>
+                    </div>
+                    <div class="quiz-question" id="quizQuestion">
+                        <p id="questionText">Soru yükleniyor...</p>
+                    </div>
+                    <div class="quiz-answers">
+                        <button class="btn-quiz btn-true" id="btnTrue">
+                            <i class="fas fa-check"></i> Doğru
+                        </button>
+                        <button class="btn-quiz btn-false" id="btnFalse">
+                            <i class="fas fa-times"></i> Yanlış
+                        </button>
+                    </div>
+                    <div class="quiz-feedback hidden" id="quizFeedback">
+                        <p id="feedbackText"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission Complete -->
+            <div class="game-panel hidden" id="missionComplete">
+                <div class="panel-content mission-complete-content">
+                    <div class="flag-animation" id="flagAnimation">
+                        <div class="astronaut-figure">
+                            <div class="astronaut-helmet"></div>
+                            <div class="astronaut-body"></div>
+                            <div class="astronaut-arm left"></div>
+                            <div class="astronaut-arm right flag-arm"></div>
+                            <div class="astronaut-leg left"></div>
+                            <div class="astronaut-leg right"></div>
+                        </div>
+                        <div class="flag-pole">
+                            <div class="flag turkey-flag">
+                                <div class="crescent"></div>
+                                <div class="star-shape">★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="mission-title">🎉 Görev Başarıyla Tamamlandı!</h2>
+                    <p>Tebrikler! Ay'a İlk Temas görevini başarıyla tamamladınız. Türk bayrağı Ay'a dikildi!</p>
+                    <div class="complete-buttons">
+                        <button class="btn btn-primary" id="newMissionBtn">
+                            <i class="fas fa-tasks"></i> Yeni Göreve Başla
+                        </button>
+                        <button class="btn btn-secondary" id="exploreMoonBtn">
+                            <i class="fas fa-walking"></i> Gezintiye Çık
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moon Exploration HUD -->
+            <div class="game-hud hidden" id="moonExplorationHUD">
+                <div class="hud-top">
+                    <div class="hud-title">
+                        <i class="fas fa-walking"></i> Ay Yüzeyi Keşfi
+                    </div>
+                    <div class="hud-timer">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                </div>
+                <div class="hud-bottom">
+                    <div class="hud-controls-info">
+                        <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Hareket</span>
+                        <span><kbd>Fare</kbd> Etrafa Bak</span>
+                        <span><kbd>Space</kbd> Zıpla</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crosshair -->
+            <div class="crosshair hidden" id="crosshair">+</div>
+        </div>
+    </div>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- App Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/solarSystem.js"></script>
+    <script src="js/mission.js"></script>
+    <script src="js/moonExplorer.js"></script>
+</body>
+</html>
