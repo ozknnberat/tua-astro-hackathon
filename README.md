@@ -62,7 +62,7 @@ Proje güvenlik önlemleri (CORS politikaları) nedeniyle yerel bir sunucu (loca
 
 Bash
 
-git clone [https://github.com/ozknnberat7/tua-astro-hackathon.git](https://github.com/ozknnberat7/tua-astro-hackathon.git)
+git clone [https://github.com/ozknnberat/tua-astro-hackathon.git](https://github.com/ozknnberat/tua-astro-hackathon.git)
 
 2. Proje dizinine gidin:
 
